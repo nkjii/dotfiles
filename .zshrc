@@ -49,9 +49,6 @@ setopt globdots
 # alias
 alias gits="git stash"
 alias gitsp="git stash pop"
-alias awsproxy='ssh 10.129.0.249'
-alias opproxy='ssh 10.49.254.247'
-alias nass-dev='ssh 10.49.254.247'
 alias ll='ls -l'
 
 # Go
