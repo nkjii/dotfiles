@@ -78,11 +78,6 @@ require("trouble").setup()
 map('n', 'gl', '<Cmd>Trouble diagnostics toggle<CR>', opts)
 -- gitsigns
 require('gitsigns').setup()
--- ToggleTerm
-require('toggleterm').setup()
-map('n', '<leader>tt', '<Cmd>ToggleTerm<CR>', opts)
-map('n', '<leader>tf', '<Cmd>ToggleTerm direction=float<CR>', opts)
-map('n', '<leader>ta', '<Cmd>ToggleTermToggleAll<CR>', opts)
 
 -- 1. LSP Sever management
 local lspconfig = require('lspconfig')
