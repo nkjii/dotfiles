@@ -33,6 +33,6 @@ map('t', '<C-]>', [[<C-\><C-n>]], opts)
 map('n', '<leader>ol', '<Cmd>ObsidianLinks<CR>', opts)
 
 -- toggleterm
-map('n', '<leader>tt', '<Cmd>ToggleTerm<CR>', opts)
+map('n', '<leader>tt', '<Cmd>ToggleTerm direction=horizontal<CR>', opts)
 map('n', '<leader>tf', '<Cmd>ToggleTerm direction=float<CR>', opts)
 map('n', '<leader>ta', '<Cmd>ToggleTermToggleAll<CR>', opts)
