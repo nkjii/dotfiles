@@ -13,6 +13,9 @@ map('n', '<leader>a5', '<Cmd>BufferGoto 5<CR>', opts)
 map('n', '<leader>a6', '<Cmd>BufferGoto 6<CR>', opts)
 map('n', '<leader>a7', '<Cmd>BufferGoto 7<CR>', opts)
 
+-- バッファ
+map('n', '<leader>q', ':BufferClose<CR>', opts)
+
 -- ウインドウ分割
 map('n', '<leader>wv', ':vs<CR>', opts)
 map('n', '<leader>wh', '<C-w>h', opts)
@@ -22,6 +25,9 @@ map('n', '<leader>wl', '<C-w>l', opts)
 
 map('n', '<leader>wd', ':bd<CR>', opts)
 map('n', '<leader>wc', ':close<CR>', opts)
+
+-- ウインドウリサイズ
+map('n' , '<leader>+', '<cmd>vertical resize +5<CR>', opts)
 
 -- ターミナルモード
 map('n', '<leader>bo', '<Cmd>bo te<CR>', opts)
