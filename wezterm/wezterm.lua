@@ -14,6 +14,7 @@ config.leader = { key="q", mods="CTRL", timeout_milliseconds=1000 }
 config.keys = {
   { key = "v", mods = "LEADER", action = act.SplitHorizontal{ domain = "CurrentPaneDomain" } },
   { key = "s", mods = "LEADER", action = act.SplitVertical{ domain = "CurrentPaneDomain" } },
+  { key = "b", mods = "LEADER", action = act.SplitPane{ direction = "Down", size = { Percent = 25 } } },
   { key = "d", mods = "LEADER", action = act.CloseCurrentPane{ confirm = true } },
   { key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
   { key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
