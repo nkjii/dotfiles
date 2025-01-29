@@ -41,6 +41,10 @@ require('tokyonight').setup({
     },
 })
 vim.cmd.colorscheme "tokyonight"
+vim.api.nvim_set_hl(0, "Comment", {
+  fg = "#a1abce",
+  italic = true,
+})
 vim.cmd("highlight TelescopeSelection cterm=bold gui=bold guifg=#a6e3a1 guibg=#181825")
 -- 行番号の色を変更
 vim.cmd [[

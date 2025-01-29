@@ -1,8 +1,11 @@
 vim.g.mapleader = " "
 
--- Move to previous/next
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
+
+map('i', 'kj', '<ESC>', opts)
+
+-- Move to previous/next
 map('n', '<leader>ah', ':BufferPrevious<CR>', opts)
 map('n', '<leader>al', ':BufferNext<CR>', opts)
 map('n', '<leader>a1', '<Cmd>BufferGoto 1<CR>', opts)
