@@ -45,6 +45,20 @@ vim.api.nvim_set_hl(0, "Comment", {
   fg = "#a1abce",
   italic = true,
 })
+-- Flash.nvimのハイライトを上書き
+vim.api.nvim_set_hl(0, "FlashMatch", {
+  fg = "#ffffff",
+  bg = "#2EB8E6",
+  bold = true,
+  nocombine = true,
+})
+vim.api.nvim_set_hl(0, "FlashLabel", {
+  fg = "#ffffff",
+  bg = "#E65C2E",
+  bold = true,
+  nocombine = true,
+})
+
 vim.cmd("highlight TelescopeSelection cterm=bold gui=bold guifg=#a6e3a1 guibg=#181825")
 -- 行番号の色を変更
 vim.cmd [[
