@@ -35,7 +35,6 @@ map('n' , '<leader>+', '<cmd>vertical resize +5<CR>', opts)
 -- ターミナルモード
 map('n', '<leader>bo', '<Cmd>bo te<CR>', opts)
 map('n', '<leader>i', ':terminal<CR>', opts)
-map('t', '<leader>t', '<C-\\><C-n>', opts)
 map('t', '<C-]>', [[<C-\><C-n>]], opts)
 
 -- obisidan

@@ -58,6 +58,7 @@ vim.api.nvim_set_hl(0, "FlashLabel", {
   bold = true,
   nocombine = true,
 })
+vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", { fg = "#8f98ba", italic = true })
 
 vim.cmd("highlight TelescopeSelection cterm=bold gui=bold guifg=#a6e3a1 guibg=#181825")
 -- 行番号の色を変更
@@ -130,7 +131,7 @@ require('lspconfig').pyright.setup{
       extraPaths = {"."}
     }
   }
-  }
+}
 
 -- nuxt typescript setup
 local function get_typescript_server_path(root_dir)
