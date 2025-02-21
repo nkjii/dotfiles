@@ -84,14 +84,6 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 vim.api.nvim_set_keymap('n', '<leader>fa', ':Telescope file_browser<CR>', { noremap = true })
 
--- hop nvim
-local hop = require('hop')
-vim.keymap.set('n', '<leader>ss', ':HopChar2<CR>', {desc = '説明'}) 
-vim.keymap.set('n', '<leader>sa', ':HopPattern<CR>', {desc = '説明'}) 
--- nvim-tree
-require("nvim-tree").setup()
-map('n', '<leader>bb', '<Cmd>NvimTreeToggle<CR>', opts)
-map('n', '<leader>bf', '<Cmd>NvimTreeFindFile<CR>', opts)
 -- trouble.nvim
 require("trouble").setup()
 map('n', 'gl', '<Cmd>Trouble diagnostics toggle<CR>', opts)

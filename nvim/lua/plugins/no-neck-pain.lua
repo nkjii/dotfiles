@@ -2,13 +2,17 @@ return {
   "shortcuts/no-neck-pain.nvim",
   config = function()
       require("no-neck-pain").setup({
+        width = 120,
         buffers = {
           scratchPad = {
-              enabled = true,
-              location = "~/notes",
+              enabled = false,
           },
           bo = {
             filetype = "md",
+          },
+          colors = {
+            backgroupnd = "onedark",
+            blend = - 0.2,
           },
         },    
         autocmds = {
