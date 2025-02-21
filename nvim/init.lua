@@ -175,7 +175,7 @@ require('lspconfig').volar.setup({
   })
 
 -- VueやNuxtのプロジェクトでなければtsserverを使う
-require('lspconfig').tsserver.setup({
+require('lspconfig').ts_ls.setup({
   single_file_support = false,
   root_dir = function(fname)
     -- VueやNuxtのプロジェクトではVolarに任せるので無効にする
