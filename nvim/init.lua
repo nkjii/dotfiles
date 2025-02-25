@@ -255,6 +255,7 @@ augroup DisableDocumentHighlightYAML
     autocmd FileType md lua vim.lsp.buf.document_highlight = function() end
     autocmd FileType markdown lua vim.lsp.buf.document_highlight = function() end
     autocmd FileType groovy lua vim.lsp.buf.document_highlight = function() end
+    autocmd FileType tf lua vim.lsp.buf.document_highlight = function() end
   augroup END
 ]]
 
