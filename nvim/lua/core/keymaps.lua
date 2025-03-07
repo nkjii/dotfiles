@@ -36,7 +36,7 @@ map('n', '<leader>wc', ':close<CR>', opts)
 
 -- ウインドウリサイズ
 map('n' , '<leader>+', '<cmd>vertical resize +5<CR>', opts)
--- ウィンドウ番号2の幅を30に設定する関数
+-- 指定したウインドウ番号の幅を30に設定する関数
 local function resize_window(win_num, width)
   vim.api.nvim_win_set_width(vim.fn.win_getid(win_num), width)
 end
@@ -60,3 +60,5 @@ map('n', '<leader>ta', '<Cmd>ToggleTermToggleAll<CR>', opts)
 -- nvim-tree
 map('n', '<leader>bb', '<Cmd>NvimTreeToggle<CR>', opts)
 map('n', '<leader>bf', '<Cmd>NvimTreeFindFile<CR> :call nvim_win_set_width(0, 30)<CR>', opts)
+
+map('n', '<leader>o', '<Cmd>Oil<CR>', opts)

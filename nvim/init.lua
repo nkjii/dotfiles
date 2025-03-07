@@ -34,7 +34,6 @@ vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
 require('tokyonight').setup({
   style = 'night',
-  transparent = true,
   styles = {
         sidebars = "transparent",
         floats = "transparent",
@@ -72,6 +71,38 @@ vim.cmd [[
      theme = "auto", -- Can also be "auto" to detect automatically.
    }
  })
+
+-- ACTIVE_COLORSCHEME and INACTIVE_COLORSCHEME must be colorschemes using `nvim_set_hl`
+BASE_COLORSCHEME = 'tokyonight'
+ACTIVE_COLORSCHEME = 'tokyonight'
+INACTIVE_COLORSCHEME = 'tokyonight-storm'
+
+-- Apply colorscheme
+vim.cmd("colorscheme " .. BASE_COLORSCHEME)
+
+-- Create autocmd to apply styler.nvim on active/inactive windows
+vim.api.nvim_create_autocmd(
+  { 'WinEnter', 'BufEnter' },
+  {
+    group = vim.api.nvim_create_augroup('theme-custom', {}),
+    callback = function(_)
+      local set_theme = require('styler').set_theme
+      local win = vim.api.nvim_get_current_win()
+
+      -- use default colorscheme instead of applying styler.nvim on floatwin
+      -- because some UIs are composed of multiple windows and they should share the theme
+      if vim.api.nvim_win_get_config(win).relative ~= "" then return end
+
+      -- apply styler.nvim on active window
+      set_theme(win, { colorscheme = ACTIVE_COLORSCHEME })
+
+      -- apply styler.nvim on inactive windows
+      for _, w in pairs(vim.api.nvim_tabpage_list_wins(0)) do
+        if w ~= win then set_theme(w, { colorscheme = INACTIVE_COLORSCHEME, transparent = true }) end
+      end
+    end
+  }
+)
 
 local map = vim.keymap.set
 local opt = { noremap = true }
