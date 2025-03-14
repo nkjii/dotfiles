@@ -62,3 +62,6 @@ map('n', '<leader>bb', '<Cmd>NvimTreeToggle<CR>', opts)
 map('n', '<leader>bf', '<Cmd>NvimTreeFindFile<CR> :call nvim_win_set_width(0, 30)<CR>', opts)
 
 map('n', '<leader>o', '<Cmd>Oil<CR>', opts)
+
+-- trouble
+map('n', 'gl', '<Cmd>Trouble diagnostics toggle<CR>', opts)
