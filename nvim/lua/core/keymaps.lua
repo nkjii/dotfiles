@@ -65,3 +65,7 @@ map('n', '<leader>o', '<Cmd>Oil<CR>', opts)
 
 -- trouble
 map('n', 'gl', '<Cmd>Trouble diagnostics toggle<CR>', opts)
+
+-- copilot
+map('n', '<C-c>o', '<Cmd>CopilotChatToggle<CR>', opts)
+map('i', '<C-c>o', '<Cmd>CopilotChatToggle<CR>', opts)
