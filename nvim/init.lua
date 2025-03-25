@@ -97,12 +97,6 @@ vim.cmd [[
   highlight LineNr guifg=#808080
   highlight CursorLineNr guifg=#FFFF00
 ]]
- require("lualine").setup({
-   options = {
-     -- ... other configuration
-     theme = "auto", -- Can also be "auto" to detect automatically.
-   }
- })
 
 local map = vim.keymap.set
 local opt = { noremap = true }
