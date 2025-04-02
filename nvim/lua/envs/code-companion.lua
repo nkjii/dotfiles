@@ -82,27 +82,42 @@ return {
                     },
                 })
             end,
+            copilot = function()
+                return require("codecompanion.adapters").extend("copilot", {
+                    schema = {
+                        model = {
+                            default = "claude-3.5-sonnet",
+                        },
+                    },
+                })
+            end,
         },
         strategies = {
             chat = {
-                adapter = "azure_openai_4o",
-                keymaps = {
-                    send = {
-                        modes = { n = "<C-CR>", i = "<C-CR>" }, -- Ctrl+Enter
-                    },
-                },
-                roles = {
-                    ---@type string|fun(adapter: CodeCompanion.Adapter): string
-                    llm = function(adapter)
-                        return "CodeCompanion (" .. adapter.formatted_name .. ")"
-                    end,
-
-                    user = "Me",
-                },
+                adapter = "copilot",
             },
             inline = {
-                adapter = "azure_openai_4o",
+                adapter = "copilot",
             },
+            -- chat = {
+            --     adapter = "azure_openai_4o",
+            --     keymaps = {
+            --         send = {
+            --             modes = { n = "<C-CR>", i = "<C-CR>" }, -- Ctrl+Enter
+            --         },
+            --     },
+            --     roles = {
+            --         ---@type string|fun(adapter: CodeCompanion.Adapter): string
+            --         llm = function(adapter)
+            --             return "CodeCompanion (" .. adapter.formatted_name .. ")"
+            --         end,
+            --
+            --         user = "Me",
+            --     },
+            -- },
+            -- inline = {
+            --     adapter = "azure_openai_4o",
+            -- },
         },
     },
 }

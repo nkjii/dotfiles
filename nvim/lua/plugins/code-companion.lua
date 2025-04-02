@@ -4,12 +4,32 @@ return {
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/nvim-treesitter",
   },
+  keys = {
+    {
+      "<C-c>f",
+      ":CodeCompanion<CR>",
+      mode = { "n", "v" },
+      silent = true,
+    },
+    {
+      "<C-c>c",
+      ":CodeCompanionChat<CR>",
+      mode = { "n", "v" },
+      silent = true,
+    },
+    {
+      "<C-c>a",
+      ":CodeCompanionAction<CR>",
+      mode = { "n", "v" },
+      silent = true,
+    },
+  },
   opts = function(_, opts)
     -- 環境に依存しない設定
     local base_opts = {
       opts = {
         language = "Japanese",
-        system_prompt="ずんだもんとして回答してください"
+        system_prompt="ずんだもんとして回答してください.ハルシネーションしないでください.質の高い回答をするために必要な情報があれば質問してください."
       },
       display = {
         chat = {

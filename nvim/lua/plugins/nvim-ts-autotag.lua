@@ -1,17 +1,19 @@
 return {
   'windwp/nvim-ts-autotag',
-  opts = {
-    -- Defaults
-    enable_close = true, -- Auto close tags
-    enable_rename = true, -- Auto rename pairs of tags
-    enable_close_on_slash = false -- Auto close on trailing </
-  },
-  -- Also override individual filetype configs, these take priority.
-  -- Empty by default, useful if one of the "opts" global settings
-  -- doesn't work well in a specific filetype
-  per_filetype = {
-    ["html"] = {
-      enable_close = true
-    }
-  }
+  config = function()
+    require('nvim-ts-autotag').setup({
+      -- デフォルト設定
+      enable_close = true, -- タグの自動閉じ
+      enable_rename = true, -- ペアのタグの自動リネーム
+      enable_close_on_slash = false, -- 末尾の </ での自動閉じ
+
+      -- 個別のファイルタイプ設定（これらはグローバルな "opts" 設定よりも優先されます）
+      -- デフォルトは空です。特定のファイルタイプでグローバル設定がうまく機能しない場合に便利です。
+      filetypes = {
+        html = {
+          enable_close = true,
+        },
+      },
+    })
+  end,
 }
