@@ -18,6 +18,12 @@ return {
       silent = true,
     },
     {
+      "<C-c>t",
+      ":CodeCompanionChat Toggle<CR>",
+      mode = { "n", "v" },
+      silent = true,
+    },
+    {
       "<C-c>a",
       ":CodeCompanionAction<CR>",
       mode = { "n", "v" },
