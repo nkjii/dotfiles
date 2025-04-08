@@ -1,5 +1,6 @@
 require("core.option")
 require("core.keymaps")
+require("config.avante")
 -- setup lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
