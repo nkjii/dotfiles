@@ -104,6 +104,7 @@ local opt = { noremap = true }
 local builtin = require('telescope.builtin')
 -- gitsigns
 require('gitsigns').setup()
+require('avante').setup({})
 
 -- noice
 require("noice").setup({

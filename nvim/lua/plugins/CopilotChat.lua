@@ -1,5 +1,4 @@
 return {
-  {
     "CopilotC-Nvim/CopilotChat.nvim",
     dependencies = {
       { "zbirenbaum/copilot.lua" },
@@ -7,7 +6,7 @@ return {
     },
     build = "make tiktoken",
     opts = {
-      -- See Configuration section for options
-    },
-  },
+      model = "claude-3.5-sonnet", -- モデル名を指定
+      debug = true, -- デバッグを有効化
+    }, 
 }
