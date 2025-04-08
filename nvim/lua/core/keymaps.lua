@@ -6,8 +6,8 @@ local opts = { noremap = true, silent = true }
 map('i', 'kj', '<ESC>', opts)
 
 -- Move to previous/next
-map('n', '<leader>ah', ':BufferPrevious<CR>', opts)
-map('n', '<leader>al', ':BufferNext<CR>', opts)
+map('n', '<leader>h', '<Cmd>BufferPrevious<CR>', opts)
+map('n', '<leader>l', '<Cmd>BufferNext<CR>', opts)
 map('n', '<leader>a1', '<Cmd>BufferGoto 1<CR>', opts)
 map('n', '<leader>a2', '<Cmd>BufferGoto 2<CR>', opts)
 map('n', '<leader>a3', '<Cmd>BufferGoto 3<CR>', opts)
